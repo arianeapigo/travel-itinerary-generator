@@ -9,8 +9,17 @@ def _get_env_or_default(name: str, default: str | None = None) -> str | None:
 
 
 # Page config
-st.set_page_config(page_title="Travel Itinerary Generator 🌎", page_icon="🌎")
-st.title("Travel Itinerary Generator 🌎")
+st.set_page_config(page_title="Travel Itinerary Generator 🌎", page_icon="🌎", layout="wide")
+
+# Create a container for the sticky header
+header_container = st.container()
+with header_container:
+    st.markdown("""
+        <div style="position: fixed; top: 3.5rem; left: 0; right: 0; background-color: white; z-index: 999; padding: 1rem; border-bottom: 1px solid #ddd;">
+            <h1 style="margin: 0;">Travel Itinerary Generator 🌎</h1>
+        </div>
+        <div style="margin-top: 8rem;"></div>
+    """, unsafe_allow_html=True)
 
 # Configuration from environment variables (no sidebar)
 endpoint = "https://hai5014-aa.openai.azure.com/"
