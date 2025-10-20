@@ -9,8 +9,8 @@ def _get_env_or_default(name: str, default: str | None = None) -> str | None:
 
 
 # Page config
-st.set_page_config(page_title="Travel Itinerary Assistant 🌎", page_icon="🌎")
-st.title("Travel Itinerary Assistant 🌎")
+st.set_page_config(page_title="Travel Itinerary Generator 🌎", page_icon="🌎")
+st.title("Travel Itinerary Generator 🌎")
 
 # Configuration from environment variables (no sidebar)
 endpoint = "https://hai5014-aa.openai.azure.com/"
@@ -38,9 +38,9 @@ if "messages" not in st.session_state:
 2. Assume the user has no knowledge of the destination. Introduce what the destination is known for and provide a quick overview of the types of activities available. If you were to travel to this destination, what do you imagine would be your main purpose? (visiting must-see attractions, cultural immersion, culinary exploration, relaxation, etc)
 3. Who do you imagine yourself going with?
 4. What is your travel style?
-5. Suggest 10-15 activities for the user to choose from, considering their answers to previous questions. Which activities are you most interested in?
-6. Out of the activities you're interested in, what would you like to do first upon arriving at the destination?
-7. Guide the user in creating the itinerary activity by activity, while building knowledge on their preferences. The user has full control over adding activities to the itinerary. Do not fill in the itinerary for the user. When the user chooses an activity, provide rational suggestions for the next activity based on locations and timing, as well as the user's preferences. The full itinerary should be displayed when the user is asked to make subsequent decisions."""}
+5. Suggest 3 first-day itineraries for the user to choose from, considering their answers to the previous questions. Each day should have different activities; highlight how the activities fit the user's preferences. Which day are you most interested in starting your trip with?
+6. Are there any adjustments you'd like to make to this day?
+7. Guide the user in building the itinerary day by day, while building knowledge on their preferences. Provide 1-day itineraries as options, and ask the user if they want to make any adjustments before moving on to the next day. When the user makes adjustments, provide rational suggestions for subsequent changes based on locations and timing, as well as the user's preferences. Display the full itinerary when presenting the user with new options."""}
     ]
 
 
