@@ -1,5 +1,4 @@
 ipykernel
 openai
 python-dotenv
-azure
 streamlit

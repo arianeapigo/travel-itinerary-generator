@@ -23,7 +23,7 @@ with header_container:
 
 # Configuration from environment variables (no sidebar)
 endpoint = "https://hai5014-aa.openai.azure.com/"
-api_key = os.environ.get("AZURE_AI_SECRET")
+api_key = os.getenv("AZURE_AI_SECRET")
 deployment_name = "gpt-4o"
 api_version = "2024-12-01-preview"
 
