@@ -21,6 +21,24 @@ with header_container:
         <div style="margin-top: 8rem;"></div>
     """, unsafe_allow_html=True)
 
+# Custom CSS to make user icon less vibrant
+st.markdown("""
+    <style>
+    .stChatMessage[data-testid="user-message"] .stChatMessageAvatar {
+        background-color: #6c757d !important; /* Muted gray color */
+    }
+    
+    .stChatMessage[data-testid="user-message"] .stChatMessageAvatar svg {
+        color: white !important;
+    }
+    
+    /* Alternative approach using CSS selectors */
+    div[data-testid="stChatMessageAvatarUser"] {
+        background-color: #6c757d !important;
+    }
+    </style>
+""", unsafe_allow_html=True)
+
 # Configuration from environment variables (no sidebar)
 endpoint = "https://hai5014-aa.openai.azure.com/"
 api_key = os.getenv("AZURE_AI_SECRET")
